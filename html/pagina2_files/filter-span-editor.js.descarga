@@ -1,0 +1,39 @@
+/* (function (jQuery, Drupal) {
+
+    Drupal.behaviors.filter_span = {
+        attach: function (context, settings) {
+            jQuery(document, context).ready(function ($) {
+                CKEDITOR.on('instanceReady', function (event) {
+                    event.editor.on('paste', function (evt) {
+                        // Obtener el contenido pegado
+                        var pastedContent = evt.data.dataValue;
+        
+                        // Procesar el contenido pegado
+                        var processedContent = processPastedContent(pastedContent);
+        
+                        // Reemplazar el contenido pegado con el contenido procesado
+                        evt.data.dataValue = processedContent;
+                    });
+                });
+        
+                function processPastedContent(content) {
+                    var tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = content;
+        
+                    var spanElements = tempDiv.getElementsByTagName('span');
+                    for (var i = spanElements.length - 1; i >= 0; i--) {
+                        if (!spanElements[i].hasAttribute('color')) {
+                            spanElements[i].parentNode.removeChild(spanElements[i]);
+                        }
+                    }
+        
+                    var processedContent = tempDiv.innerHTML;
+        
+                    return processedContent;
+                }
+            });
+        }
+    };
+
+
+})(jQuery, Drupal); */

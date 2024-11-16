@@ -1,0 +1,239 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+ @media print
+{   
+
+    
+
+    body, html{
+        -webkit-print-color-adjust:exact;
+        padding: 0 !important;
+        margin: 0 !important;
+
+    }
+
+
+
+    nav {
+        display: none;
+    }
+    .path-anses-comercios .view-content {
+     
+    }
+    .path-anses-comercios .view-footer {
+        width: 100%;
+        float: left;
+        background: #e3e3e3 !important;
+        -webkit-print-color-adjust: exact; 
+        padding: 15px 15px;
+        padding-right: 0;
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        /* margin-top: 75px; */
+    }
+    
+    .path-anses-comercios .view-footer .footer_print{
+        display: block;
+    }
+    .path-anses-comercios .view-footer .descrip_footer {
+        width: auto;
+        float: left;
+    }
+    
+    .path-anses-comercios .view-footer .img_qr {
+        width: auto;
+        float: right;
+    }
+    
+    .path-anses-comercios .view-footer .descrip_footer p {
+        font-size: 16px;
+        color: #41baec !important;
+        font-weight: bold;
+        -webkit-print-color-adjust: exact; 
+
+    }
+    
+    /* Imagen codigo qr */
+    .path-anses-comercios .view-footer .img_qr img {
+        right: 0;
+        margin-top: -55px;
+        width: 95px;
+    }
+
+    #views-exposed-form-anses-comercios-page-1 .form-inline .form-item{
+        display: none;
+    }
+    div#footer-top, footer#footer{
+        display: none;
+    }
+    .grecaptcha-badge {
+        display: none !important;
+    }
+    .path-anses-comercios .view-header {
+        width: 100%;
+        float: left;
+        display: block;
+        background-color: #41baec !important;
+        -webkit-print-color-adjust: exact; 
+        padding: 20px 0;
+        /* position: fixed;
+        top: 0;
+        left: 0; */
+      }
+      .path-anses-comercios ol.breadcrumb {
+        display: none;
+    }
+    #views-exposed-form-anses-comercios-page-1 .form-inline .form-actions{
+        display: none;
+    }
+    .header-print .logo_header_print, .descrip_header_print {
+        width: 50%;
+        float: left;
+    }
+    .path-anses-comercios .view-footer {
+        /* position: fixed;
+        bottom: 0;
+        left: 0; */
+        display: block;
+      }
+      .header-print .text_header {
+        width: 50%;
+        float: left;
+        text-align: right;
+        margin-top: 8px;
+    }
+    
+    .header-print img {
+        width: 100px;
+        float: left;
+    }
+    .header-print {
+        padding: 0 25px;
+    }
+
+    /* Al quitar de aca comercios-tipo-descuento se agrega a PDF para imprimir */
+    th#view-comercios-logo-table-column,  
+    th#view-comercios-modalidad-table-column, 
+    th#view-comercios-provincia-table-column, 
+    th#view-comercios-localidad-table-column, 
+    th#view-comercios-ubicacion-table-column {
+        display: none;
+    }
+
+    /* Al quitar child 4 se agrega columna de descuentso a  PDF para imprimir */
+    .path-anses-comercios .view-anses-comercios tbody tr td:nth-child(1),
+    .path-anses-comercios .view-anses-comercios tbody tr td:nth-child(5), 
+    .path-anses-comercios .view-anses-comercios tbody tr td:nth-child(6),
+    .path-anses-comercios .view-anses-comercios tbody tr td:nth-child(7), 
+    .path-anses-comercios .view-anses-comercios tbody tr td:nth-child(9) {
+        display: none;
+    }
+
+    .logo_header_print .text_header p {
+        color: #575656 !important;
+        font-size: 25px;
+        -webkit-print-color-adjust: exact; 
+        font-weight: bold;
+    }
+    
+    .logo_header_print .text_header p.white_color {
+        color: #FFF !important;
+        -webkit-print-color-adjust: exact; 
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+
+    th#view-comercios-titulo-table-column, th#view-comercios-tipo-descuento-table-column, th#view-comercios-direccion-table-column, th#view-comercios-rubro-table-column {
+        color: #41baec !important;
+        -webkit-print-color-adjust: exact; 
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    th#view-comercios-direccion-table-column {
+        padding-right: 70px;
+    }
+
+    .path-anses-comercios .view-anses-comercios tbody tr td:nth-child(8) {
+        width: 276px;
+        padding-right: 75px;
+    }
+
+
+
+
+    .view-anses-comercios table tbody tr:nth-child(odd) td {
+        border: 0;
+        background: #f1f1f1 !important;
+        -webkit-print-color-adjust: exact; 
+
+    }
+    .view-anses-comercios table tbody tr td {
+        border: 0;
+        font-weight: normal;
+
+    }
+
+    .header-print .logo_header_print, .descrip_header_print p {
+        font-size: 25px;
+        color: #575656 !important;
+        -webkit-print-color-adjust: exact; 
+
+    }
+    
+    .header-print .logo_header_print, .descrip_header_print p.white_color {
+        color: #FFF !important;
+        -webkit-print-color-adjust: exact; 
+
+    }
+
+    .header-print .logo_header_print{
+        width: 60%;
+    }
+    .descrip_header_print{
+        width: 40%;
+    }
+    
+    .path-anses-comercios .header-print{
+        display: block;
+    }
+    @page {
+        size: auto;
+        margin:0;
+    }
+
+    .highlighted {
+        display: none;
+    }
+    
+    .view-anses-comercios {
+        margin-top: 0;
+    }
+    form#views-exposed-form-anses-comercios-page-1 {
+        margin: 0 !important;
+    }
+    .path-anses-comercios .view-filters {
+        display: none;
+    }
+
+    .path-anses-comercios header.navbar {
+        display: none;
+    }
+    .path-anses-comercios .view-footer button.btn.btn-default.print {
+        display: none;
+    }
+
+    .footer-down .col-sm-4 p {
+        display: none;
+    }
+
+    .view-display-id-page_1 .view-header h2 {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,12 @@
+(function(jQuery,Drupal){Drupal.behaviors.anses_feedback={attach:function(context,settings){var faces_button=jQuery('.feedback-box .feedback-button')
+var faces_svg=jQuery('.feedback-box .feedback-button svg')
+var flecha=jQuery('.arrow-down')
+var $box=jQuery('.feedback-inner')
+jQuery('.feedback-cancel span').hide()
+function clean(){for(var i=0;i<=faces_svg.length;i++){var faces_svg_class=jQuery('.face-'+i);for(var h=0;h<=faces_svg_class.length;h++){jQuery(faces_svg_class[h]).removeAttr("style");}}};function selected(answer){for(var i=0;i<faces_svg.length;i++){if(i!==answer-1){var faces_svg_class=jQuery('.face-'+i)
+for(var h=0;h<faces_svg_class.length;h++){faces_svg_class[h].style.fill="grey"}}}};$box.on('click','.feedback-button',function(event){event.preventDefault();jQuery('#wrapper_form_feedback').show();var answer=jQuery(this).data('answer');jQuery('#edit-answer--2').val(answer);jQuery('.form-textarea').focus();if(jQuery(this).hasClass("active")){}else{jQuery('.arrow-down').hide();jQuery('.wrap_form_feedback .feedback-box .feedback-inner ul li a').removeClass("active");jQuery(this).addClass("active");jQuery(this).find('.arrow-down').show();jQuery(this).addClass("face-"+answer);}
+selected(answer);event.stopPropagation();})
+jQuery('#feedback-cancel').click(function(){clean();jQuery('#wrapper_form_feedback').hide();})
+jQuery('.boton_flotante').once('anses_feedback').click(function(){if(jQuery(this).hasClass("active")){jQuery('.wrap_form_feedback').removeClass('active');jQuery('#overlay').removeClass('active');jQuery(this).removeClass('active');return false;}else{jQuery(this).addClass('active');jQuery('.wrap_form_feedback').addClass('active');jQuery('#overlay').addClass('active');return false;}})
+jQuery('.cerrar').click(function(){jQuery('.boton_flotante').removeClass('active');jQuery('.wrap_form_feedback').removeClass('active');jQuery('#overlay').removeClass('active');})
+jQuery('#overlay').click(function(){jQuery('#overlay').removeClass("active");jQuery('.wrap_form_feedback').removeClass('active');jQuery('.boton_flotante').removeClass('active');});}}})(jQuery,Drupal);
